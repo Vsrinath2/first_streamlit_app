@@ -40,3 +40,8 @@ my_cur.execute("select * from PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains :")
 streamlit.dataframe(my_data_rows)
+
+
+streamlit.header('what fruit whould like to add ?')
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user added  ', fruit_choice)
